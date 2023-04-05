@@ -49,13 +49,13 @@ public class SerlvetCreateAccount extends HttpServlet {
         
         try {
             this.usersManager.ajouter(user);
-            response.sendRedirect("./");
+            //response.sendRedirect("/WEB-INF/verificationInfo.jsp");
+            request.getRequestDispatcher("/WEB-INF/verificationInfo.jsp").forward(request, response);
         }catch(BusinessException e) {
             request.setAttribute("messageErreur", e.getMessage());
         }
         System.out.println("User qui va être créé : " + user.toString());
         // il y a une erreur à se niveau
-        request.getRequestDispatcher("./index.html").forward(request, response);
     }
     
 
