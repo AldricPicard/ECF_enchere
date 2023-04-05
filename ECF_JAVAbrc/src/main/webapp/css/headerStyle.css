@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-color: #D8E9C3;
+    --body-color: #FCF9F0;
+    --font-color: #161A43;
+    --color-green: #5D8949;
+
+}
+
+.header{
+    background: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-size: 42px;
+    max-height: 200px;
+    width: 100%;
+}
+.header img{
+    max-height: 200px;
+    /* background: red; */
+}
+.link_connection{
+    display: flex;
+    align-items: center;
+}
+.link_connection a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.link_connection a:visited{
+    color: var(--font-color);
+}
+

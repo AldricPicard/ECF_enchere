@@ -1,0 +1,164 @@
+@charset "ISO-8859-1";*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-color: #D8E9C3;
+    --body-color: #FCF9F0;
+    --font-color: #161A43;
+    --color-green: #5D8949;
+
+}
+
+body {
+    background-color: var(--body-color);
+    color:var(--font-color);
+    width: 100vw;
+}
+
+
+.header{
+    background: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-size: 42px;
+    max-height: 200px;
+    width: 100%;
+}
+.header img{
+    max-height: 200px;
+}
+.link_connection{
+    display: flex;
+    align-items: center;
+}
+.link_connection a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.link_connection a:visited{
+    color: var(--font-color);
+}
+
+
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.14);
+    padding: 50px 0;
+}
+
+form * {
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+}
+
+.label-input{
+    display: flex;
+    margin: 20px 0;
+    /* height: 100px; */
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 50px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    width: 40%;
+
+} 
+
+input {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 50%;
+    height: 80px;
+    background-color: white;
+    border: 2px solid #161A43;
+    margin: 0px 0 0 75px;
+    font-size: 14px;
+} 
+button {
+    width: 200px;
+    height: 100px;
+    /* margin: 8px auto; */
+    background-color: white;
+    color: var(--color-green);
+    border: 2px solid #161A43;
+    padding: 0 15px;
+    font-size: 32px;
+    /* font-weight: 600; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+input::placeholder {
+    color: rgba(27, 27, 27, 0.7);
+} 
+input:focus{
+    background-color: rgba(225, 225, 225, 0.7);
+    outline: 1px solid rgba(27, 27, 27, 0.7);
+} 
+.login-container{
+    /* background: red; */
+}
+.login-container-right{
+    display: flex;
+    /* background: blue; */
+    align-items: center;
+}
+.login-container-right button{
+    font-weight: bold;
+}
+.login-container-right label{
+    font-size: 32px;
+    margin: 0 20px;
+}
+#label_cookie{
+    width: 40px;
+}
+.login-container a{
+    display: flex;
+    justify-content: center;
+    color: var(--color-green);
+    font-size: 24px;
+}
+.login-container a:visited{
+    color: var(--color-green);
+}
+.form2{
+    display: flex;
+}
+#btn-createAcc {
+    margin: 0 auto;
+    font-weight: bold;
+
+}
+.form2 button{
+    width: 60%;
+    height: 8vh;
+    font-size: 42px;
+    
+}
+
+
+/* button:hover{
+    background-color: #8598ab;
+    transition: all 0.2s;
+    outline: 1px solid rgba(27, 27, 27, 0.7);
+} */
+
+
+

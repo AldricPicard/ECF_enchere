@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --nav-color: #D8E9C3;
+    --body-color: #FCF9F0; 
+    --font-color: #161A43;
+    --color-green: #5D8949;
+
+}
+
+body {
+    background-color: var(--body-color);
+    color:var(--font-color);
+}
+
+/*** HEADER ***/
+.header{
+    background: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-size: 42px;
+    max-height: 200px;
+    width: 100%;
+}
+.header img{
+    max-height: 200px;
+    /* background: red; */
+}
+.link_connection{
+    display: flex;
+    align-items: center;
+}
+.link_connection a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.link_connection a:visited{
+    color: var(--font-color);
+}
+/*** HEADER ***/
+
+form {
+    width: 95vw;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 8px;
+}
+
+form * {
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.form-div{
+    /* display: flex; */
+    margin: 15px 0;
+}
+label {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #161A43;
+    padding: 0 10px;
+    margin: px auto;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: rgba(27, 27, 27, 0.7);
+}
+input:focus{
+    background-color: rgba(225, 225, 225, 0.7);
+    outline: 1px solid rgba(27, 27, 27, 0.7);
+}
+.btn-grp{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+button {
+    width: 100%;
+    margin: 8px auto;
+    background-color: white;
+    color: var(--color-green);
+    border: 2px solid #161A43;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #8598ab;
+    transition: all 0.2s;
+    outline: 1px solid rgba(27, 27, 27, 0.7);
+}
+button:nth-child(2){
+    flex-shrink: 0;
+}
+
+
