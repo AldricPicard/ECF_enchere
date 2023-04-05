@@ -38,9 +38,12 @@ public class UserDAOJdbcImpl implements UserDAO {
             user.setNo_utilisateur(rs.getInt(1));
         }
         cnx.close();
-        
-        
-        
     }
+
+	@Override
+	public String getName(Users user) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
