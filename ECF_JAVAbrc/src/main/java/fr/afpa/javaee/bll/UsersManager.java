@@ -40,4 +40,11 @@ public class UsersManager {
             throw new BusinessException("Le téléphone ne peut contenir que 15 caractère");
         }
     }
+//    public Users findByUsernameAndPassword(String username, String password) {
+//		for (Users user : Users) {
+//			if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+//				return user;
+//			}
+//		}return null; // on retourne null si non trouvé
+//	}
 }

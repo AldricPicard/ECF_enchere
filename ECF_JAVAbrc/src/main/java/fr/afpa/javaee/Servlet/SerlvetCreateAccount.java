@@ -45,6 +45,15 @@ public class SerlvetCreateAccount extends HttpServlet {
 //        if(password.equals(passwordConfirmation)) {
 //            validPassword = password;
 //        }
+        request.setAttribute("pseudo", pseudo);
+        request.setAttribute("nom", nom);
+        request.setAttribute("prenom", prenom);
+        request.setAttribute("email", email);
+        request.setAttribute("phone", phone);
+        request.setAttribute("street", street);
+        request.setAttribute("number", number);
+        request.setAttribute("city", city);
+        request.setAttribute("password", password);
         Users user = new Users(pseudo,nom,prenom,email,phone,street,number,city,password, 300 , false);
         
         try {
