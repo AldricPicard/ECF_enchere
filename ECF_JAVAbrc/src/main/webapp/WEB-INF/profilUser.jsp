@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,7 +16,7 @@
     <form action="./#" method="post">
         <h3>Mon profil</h3>
         <div class="form-div">
-            <label for="username">Pseudo</label>
+            <label for="username">${ user.nom }</label>
             <input type="text" value="pseudo" id="username">
         </div>
         <div class="form-div">
@@ -26,15 +24,15 @@
             <input type="text" value="Nom" id="lastname">
         </div>
         <div class="form-div">
-            <label for="firstname">PrÃ©nom</label>
-            <input type="text" value="prÃ©nom" id="firstname">
+            <label for="firstname">Prénom</label>
+            <input type="text" value="prénom" id="firstname">
         </div>
         <div class="form-div">
             <label for="email">Email</label>
             <input type="email" value="email" id="email">
         </div>
         <div class="form-div">
-            <label for="phone">TÃ©lÃ©phone</label>
+            <label for="phone">Téléphone</label>
             <input type="tel" value="phone" id="phone">
         </div>
         <div class="form-div">

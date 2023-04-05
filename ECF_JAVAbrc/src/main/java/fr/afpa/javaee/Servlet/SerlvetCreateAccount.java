@@ -50,7 +50,7 @@ public class SerlvetCreateAccount extends HttpServlet {
         try {
             this.usersManager.ajouter(user);
             //response.sendRedirect("/WEB-INF/verificationInfo.jsp");
-            request.getRequestDispatcher("/WEB-INF/verificationInfo.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/profilUser.jsp").forward(request, response);
         }catch(BusinessException e) {
             request.setAttribute("messageErreur", e.getMessage());
         }
