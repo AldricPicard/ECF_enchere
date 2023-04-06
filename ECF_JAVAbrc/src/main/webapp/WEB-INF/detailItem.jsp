@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,7 +24,7 @@
 		<%@include file="header.jsp" %>
 	</c:otherwise>
 </c:choose>
-    <h3>DÃ©tail vente</h3>
+    <h3>Détail vente</h3>
     <h4>Nom de l'objet</h4>
     <div class="picture">
         <img src="" alt="">
@@ -53,7 +51,7 @@
     <input type="number" name="proposition" id="proposition">
 
 
-    <button type="submit">EnchÃ©rir</button>
+    <button type="submit">Enchérir</button>
     <button type="submit">Retour</button>
 </body>
 

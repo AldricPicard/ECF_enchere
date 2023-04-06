@@ -1,8 +1,5 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,19 +29,19 @@
 
             <div>
                 <input type="checkbox" id="auction_open" name="auction_open" value="auction_open" checked>
-                <label for="auction_open">Mes enchÃ¨res ouvertes</label>
+                <label for="auction_open">Mes enchères ouvertes</label>
             </div>
 
 
             <div>
                 <input type="checkbox" id="auction_active" name="drone" value="auction_active">
-                <label for="auction_active">Mes enchÃ¨res en cours</label>
+                <label for="auction_active">Mes enchères en cours</label>
             </div>
 
 
             <div>
                 <input type="checkbox" id="auction_win" name="auction_win" value="auction_win" checked>
-                <label for="auction_win">Mes enchÃ¨res remportÃ©es</label>
+                <label for="auction_win">Mes enchères remportées</label>
             </div>
         </fieldset>
 
@@ -75,12 +72,12 @@
         </fieldset>
 
 
-        <label for="category">CatÃ©gories</label>
+        <label for="category">Catégories</label>
         <select name="category" id="category">
             <option value="all">Toutes</option>
             <option value="car">Voiture</option>
             <option value="furnishing">Ameublement</option>
-            <option value="art_and_decoration">Art et dÃ©coration</option>
+            <option value="art_and_decoration">Art et décoration</option>
             <option value="fashion_and_jewelry">Mode et bijoux</option>
             <option value="watchmaking">Horlogerie</option>
             <option value="music">Musique</option>

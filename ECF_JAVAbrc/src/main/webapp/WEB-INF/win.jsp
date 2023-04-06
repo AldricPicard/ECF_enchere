@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +18,7 @@
 
 <body>
 	<%@include file="header.jsp" %>
-    <h3>Vous avez remportÃ©e l'enchere</h3>
+    <h3>Vous avez remportée l'enchere</h3>
     <h4>Nom de l'objet</h4>
     <div class="picture">
         <img src="" alt="">
@@ -38,7 +37,7 @@
         <p>vendeur</p>
         <p>telephone</p>
     </fieldset>
-    <button type="submit">Retrait effectuÃ©</button>
+    <button type="submit">Retrait effectué</button>
 </body>
 
 

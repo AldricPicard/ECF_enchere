@@ -1,6 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/connection.css">
 <title>Connexion</title>
@@ -32,11 +33,11 @@
                 <input type="checkbox" name="cookie_remember_me" id="label_cookie">
                 <label for="label_cookie">Se souvenir de moi</label>
             </div>
-            <a href="./ServletForgotPassword">Mot de passe oubliÃ©</a>
+            <a href="./ServletForgotPassword">Mot de passe oublié</a>
 		</div>
 	</form>
 	<form action="./SerlvetCreateAccount" method="get" class="form2">
-		<button id="btn-createAcc">CrÃ©er un compte</button>
+		<button id="btn-createAcc">Créer un compte</button>
 	</form>
 </body>
 </html>
