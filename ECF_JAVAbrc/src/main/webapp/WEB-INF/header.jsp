@@ -1,9 +1,23 @@
-
- <header class="header">
-        <img src="./images/unnamed.png" id="logo_green_city">
-        <div class="link_connection">
-            <div class="link_connection_a">
-                <a href="./ServletConnectionUsers">S'inscrire - Se connecter</a>
-            </div>
-        </div>
-    </header>
+<header>
+	<img alt="logo" src="logo">
+	<nav>
+	
+<!-- 	//Si mon User n'est pas vide, j'affiche le premier menu -->
+<!-- 	//Si mon User est vide j'affiche le deuxieme menu -->
+		<c:choose>
+			<c:when test="${!empty sessionScope.utilisateur }" >
+				<ul>
+					<li><a href="">Vendre un article</a></li>
+					<li><a href="">Mon profil</a></li>
+					<li><a href="">Deconnection</a></li>
+				</ul>
+			</c:when>
+			<c:when test="${empty sessionScope.utilisateur }" >
+				<ul>
+				<li><a href="">S'inscrire</a></li>
+				<li><a href="">Se connecter</a></li>
+			</ul>
+			</c:when>		
+		</c:choose>	
+	</nav>
+</header>

@@ -10,15 +10,18 @@
 </head>
 
 <body>
-
-    <header class="header">
-        <h1><img src="./images/unnamed.png" id="logo_green_city"></h1>
-        <div class="link_connection">
-            <div class="link_connection_a">
-                <p>${ username }</p>
-            </div>
-        </div>
-    </header>
+	<%@include file="header.jsp" %>
+<%-- 	<c:if test="${ !empty sessionScope.utilisateur.nom }"> --%>
+<%--     <p>Vous êtes ${ sessionScope.utilisateur.nom } !</p> --%>
+<%-- 	</c:if> --%>
+<%--     <c:choose> --%>
+<%-- 	<c:when test="${!empty sessionScope.utilisateur.nom }"> --%>
+<%-- 		<%@include file="headerDisconnectBTN.jsp" %> --%>
+<%-- 	</c:when> --%>
+<%-- 	<c:otherwise> --%>
+<%-- 		<%@include file="header.jsp" %> --%>
+<%-- 	</c:otherwise> --%>
+<%-- </c:choose> --%>
 
 
     <main>

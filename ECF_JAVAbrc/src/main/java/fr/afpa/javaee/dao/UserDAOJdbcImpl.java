@@ -11,7 +11,7 @@ import fr.afpa.javaee.bo.Users;
 public class UserDAOJdbcImpl implements UserDAO {
     //correctif de l'erreur sql
     private static final String INSERT_USER="INSERT INTO utilisateurs(pseudo,nom,prenom,email,telephone,rue,code_postal,ville,mot_de_passe,credit,administrateur) VALUES(?,?,?,?,?,?,?,?,?,?,?);";
-    private static final String SELECT_PSEUDO_PASSWORD="SELECT pseudo,mot_de_passe from utilisateurs where pseudo=? and mot_de_passe=?;";
+    private static final String SELECT_PSEUDO_PASSWORD="SELECT * from utilisateurs where pseudo=? and mot_de_passe=?;";
     
     // ajouter un user dans la base de donner
     @Override
@@ -41,24 +41,35 @@ public class UserDAOJdbcImpl implements UserDAO {
         cnx.close();
     }
     
-    public Users verifPseudoPassword(String pseudo, String password) throws SQLException {
+    public Users envoiDonnePourConnection(String pseudo, String password) throws SQLException {
     	Connection cnx = ConnectionBDD.getConnection();
-    	
         PreparedStatement pstmt = cnx.prepareStatement(SELECT_PSEUDO_PASSWORD);
-        pstmt.setString(1 , pseudo);
-        pstmt.setString(2 , password);
+        pstmt.setString(1, pseudo);
+        pstmt.setString(2, password);
         ResultSet rs = pstmt.executeQuery();
-        //cnx.close();
+
+        Users user = new Users();
         if (rs.next()) {
-            // Les informations sont valides
-            Users user = new Users();
+            user = new Users();
+            user.setNo_utilisateur(rs.getInt("no_utilisateur"));
             user.setPseudo(rs.getString("pseudo"));
+            user.setNom(rs.getString("nom"));
+            user.setPrenom(rs.getString("prenom"));
+            user.setEmail(rs.getString("email"));
+            user.setTelephone(rs.getString("telephone"));
+            user.setRue(rs.getString("rue"));
+            user.setCodePostal(rs.getInt("code_postal"));
+            user.setVille(rs.getString("ville"));
             user.setMotDePasse(rs.getString("mot_de_passe"));
+            user.setCredit(rs.getInt("credit"));
+            user.setAdmin(rs.getBoolean("administrateur"));
             return user;
+            
+        }else {
+        	return null;
+        	
         }
-        else {
-            // Les informations ne sont pas valides
-            return null;
-        }
-    }      
+
+        
+    }   
 }

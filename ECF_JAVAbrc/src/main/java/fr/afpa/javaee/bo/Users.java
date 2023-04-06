@@ -140,6 +140,10 @@ public class Users {
                 ", admin=" + admin +
                 '}';
     }
+    
+    public String voirSiJeFaitDeLaMerde(String pseudo,String password) {
+    	return "Dans user il y a "+pseudo+" et "+password;
+    }
 
     
 }

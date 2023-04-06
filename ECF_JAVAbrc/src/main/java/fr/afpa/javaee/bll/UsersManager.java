@@ -24,17 +24,13 @@ public class UsersManager {
     
     public Users envoiDonnePourConnection(String pseudo,String password) throws BusinessException {
     	try {
-    		return this.userDAO.verifPseudoPassword(pseudo, password);
+    		return this.userDAO.envoiDonnePourConnection(pseudo, password);
     	}catch(SQLException e){
     		e.printStackTrace();
     		throw new BusinessException("Erreur lors de la vérification du pseudo et mot de passe");
     	}
 		
     }
-    
-    
-    
-    
     
     
     
