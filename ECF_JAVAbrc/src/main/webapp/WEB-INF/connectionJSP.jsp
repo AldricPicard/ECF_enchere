@@ -7,7 +7,7 @@
 </head>
 <body>
 		<%@include file="header.jsp" %>
-	<form action="./SerlvetConnectionAccount" method="POST">
+	<form action="./ServletConnectionUsers" method="POST">
 		<div class="label-input">
 			<label for="login_user">Identifiant</label>
 			<input type="text" id="login_user" name="account_connection_form">
