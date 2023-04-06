@@ -14,7 +14,8 @@
 		<%@include file="header.jsp" %>
 	</c:otherwise>
 </c:choose>
-	<form action="./SerlvetConnectionAccount" method="POST">
+	<form action="./ServletConnectionUsers" method="POST">
+
 		<div class="label-input">
 			<label for="login_user">Identifiant</label>
 			<input type="text" id="login_user" name="account_connection_form">
@@ -31,11 +32,11 @@
                 <input type="checkbox" name="cookie_remember_me" id="label_cookie">
                 <label for="label_cookie">Se souvenir de moi</label>
             </div>
-            <a href="./ServletForgotPassword">Mot de passe oublié</a>
+            <a href="./ServletForgotPassword">Mot de passe oubliÃ©</a>
 		</div>
 	</form>
 	<form action="./SerlvetCreateAccount" method="get" class="form2">
-		<button id="btn-createAcc">Créer un compte</button>
+		<button id="btn-createAcc">CrÃ©er un compte</button>
 	</form>
 </body>
 </html>

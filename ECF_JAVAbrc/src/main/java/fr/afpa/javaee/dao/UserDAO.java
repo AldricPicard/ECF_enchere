@@ -7,6 +7,8 @@ import fr.afpa.javaee.bo.Users;
 
 public interface UserDAO {
 	public void ajouter(Users user) throws SQLException;
-	public String getName(Users user) throws SQLException;
-	
+  public Users verifPseudoPassword(String pseudo, String password) throws SQLException;
 }
+// il faut faire la methode dans la usermanager
+// avec une instance de userDAO pour faire le lien a une methode get DAO qui nous retourne une
+// instance de jdbcimpl qui nous traite la commande sql
