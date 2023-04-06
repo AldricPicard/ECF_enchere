@@ -40,12 +40,6 @@ public class UserDAOJdbcImpl implements UserDAO {
         }
         cnx.close();
     }
-
-//	@Override
-//	public Users verifPseudoPassword(String pseudo, String password) throws SQLException {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
     
     public Users verifPseudoPassword(String pseudo, String password) throws SQLException {
     	Connection cnx = ConnectionBDD.getConnection();
@@ -67,6 +61,3 @@ public class UserDAOJdbcImpl implements UserDAO {
             return null;
         }
         
-    }
-
-}

@@ -12,7 +12,14 @@
 
 
 <body>
-	<%@include file="header.jsp" %>
+<c:choose>
+	<c:when test="${utilisateurs.no_utilisateur != null }">
+		<%@include file="headerDisconnectBTN.jsp" %>
+	</c:when>
+	<c:otherwise>
+		<%@include file="header.jsp" %>
+	</c:otherwise>
+</c:choose>
     <form action="./#" method="post">
         <h3>Mon profil</h3>
         <div class="form-div">

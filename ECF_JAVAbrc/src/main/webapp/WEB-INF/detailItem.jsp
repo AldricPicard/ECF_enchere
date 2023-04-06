@@ -18,7 +18,14 @@
 
 
 <body>
-<%@include file="header.jsp" %> 
+<c:choose>
+	<c:when test="${utilisateurs.no_utilisateur != null }">
+		<%@include file="headerDisconnectBTN.jsp" %>
+	</c:when>
+	<c:otherwise>
+		<%@include file="header.jsp" %>
+	</c:otherwise>
+</c:choose>
     <h3>Détail vente</h3>
     <h4>Nom de l'objet</h4>
     <div class="picture">
