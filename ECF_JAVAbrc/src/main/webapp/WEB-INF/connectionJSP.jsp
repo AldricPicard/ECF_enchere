@@ -6,7 +6,14 @@
 <title>Connexion</title>
 </head>
 <body>
+		<c:choose>
+	<c:when test="${utilisateurs.no_utilisateur != null }">
+		<%@include file="headerDisconnectBTN.jsp" %>
+	</c:when>
+	<c:otherwise>
 		<%@include file="header.jsp" %>
+	</c:otherwise>
+</c:choose>
 	<form action="./SerlvetConnectionAccount" method="POST">
 		<div class="label-input">
 			<label for="login_user">Identifiant</label>
