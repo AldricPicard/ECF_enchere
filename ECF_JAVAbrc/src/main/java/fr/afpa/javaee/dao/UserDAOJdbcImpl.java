@@ -60,4 +60,5 @@ public class UserDAOJdbcImpl implements UserDAO {
             // Les informations ne sont pas valides
             return null;
         }
-        
+    }      
+}

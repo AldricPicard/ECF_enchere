@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import fr.afpa.javaee.bll.*;
 import fr.afpa.javaee.bo.Users;
-import fr.afpa.javaee.dao.UserDAO;
+
 
 /**
  * Servlet implementation class ServletConnectionUsers
@@ -23,6 +23,7 @@ public class ServletConnectionUsers extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		request.getRequestDispatcher("/WEB-INF/connectionJSP.jsp").forward(request, response);
 	}
 
