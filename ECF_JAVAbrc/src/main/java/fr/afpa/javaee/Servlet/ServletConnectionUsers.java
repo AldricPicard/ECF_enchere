@@ -48,11 +48,14 @@ public class ServletConnectionUsers extends HttpServlet {
 		String userPseudo = request.getParameter("account_pseudo");
 		String userPassword = request.getParameter("account_password");
 		
-		
-		if (request.getParameter("cookie_remember_me") != null) { // Si la case "se souvenir de moi" est coché créer le cookie
-            Cookie monCookie = new Cookie("username", username);
-            monCookie.setMaxAge(60 * 60 * 24 * 30); // Durée de vie du cookie 1mois 
-            response.addCookie(monCookie);
+		//création des cookies
+		if (request.getParameter("cookie_remember_me") != null && request.getParameter("cookie_remember_me") != null) { // Si la case "se souvenir de moi" est coché créer le cookie est crée
+			
+			Cookie cookiePseudo = new Cookie("userPseudo", userPseudo);
+			Cookie cookiePassword = new Cookie("userPassword", userPassword);
+			cookiePseudo.setMaxAge(60 * 60 * 24 * 30); // Durée de vie du cookie 1mois 
+            response.addCookie(cookiePseudo);
+            response.addCookie(cookiePassword);
         }
 		
 		
