@@ -16,14 +16,16 @@
 	</c:otherwise>
 </c:choose>
 	<form action="./ServletConnectionUsers" method="POST">
-
+		<c:if test="${ !empty sessionScope.username}">
+   	 		<p>Vous êtes ${sessionScope.username} !</p>
+		</c:if>
 		<div class="label-input">
 			<label for="login_user">Identifiant</label>
-			<input type="text" id="login_user" name="account_connection_form">
+			<input type="text" id="login_user" name="account_pseudo" required>
         </div>
         <div class="label-input">
 			<label for="login_password">Mot de passe</label>
-			<input type="password" id="login_password" name="account_connectionn_form">
+			<input type="password" id="login_password" name="account_password" required>
 		</div>
 
 

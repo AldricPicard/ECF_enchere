@@ -30,8 +30,8 @@ public class SerlvetCreateAccount extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //faire Servelt avec les récupération utilisateurs
-        //testpush
+        //Servelt avec les récupération utilisateurs
+   
         String pseudo = request.getParameter("creationAccountNickName");
         String nom = request.getParameter("creationAccountLastName");
         String prenom = request.getParameter("creationAccountName");
@@ -41,10 +41,7 @@ public class SerlvetCreateAccount extends HttpServlet {
         int number = Integer.parseInt(request.getParameter("creationAccountNumber"));
         String city = request.getParameter("creationAccountCity");
         String password = request.getParameter("creationAccountPassword");
-//        String passwordConfirmation = request.getParameter("creationAccountPasswordConfirmation");
-//        if(password.equals(passwordConfirmation)) {
-//            validPassword = password;
-//        }
+
         request.setAttribute("pseudo", pseudo);
         request.setAttribute("nom", nom);
         request.setAttribute("prenom", prenom);
@@ -58,13 +55,13 @@ public class SerlvetCreateAccount extends HttpServlet {
         
         try {
             this.usersManager.ajouter(user);
-            //response.sendRedirect("/WEB-INF/verificationInfo.jsp");
+            
             request.getRequestDispatcher("/WEB-INF/profilUser.jsp").forward(request, response);
         }catch(BusinessException e) {
             request.setAttribute("messageErreur", e.getMessage());
         }
         System.out.println("User qui va être créé : " + user.toString());
-        // il y a une erreur à se niveau
+        
     }
     
 
