@@ -20,7 +20,7 @@
 		<%@include file="header.jsp" %>
 	</c:otherwise>
 </c:choose>
-    <form action="./#" method="post">
+    <form action="./ServletUpdateAccount" method="post">
         <h3>Mon profil</h3>
         <div class="form-div">
             <label for="username">Pseudo</label>
@@ -55,7 +55,7 @@
             <input type="text" value="${ sessionScope.utilisateur.ville }" id="city">
         </div>
         <div class="btn-grp">
-            <button href="">Modifier</button>
+            <button>Modifier</button>
             <button>Supprimer mon compte</button>
             <button>Retour</button>
         </div>

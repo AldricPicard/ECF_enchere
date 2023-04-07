@@ -13,14 +13,22 @@
     --color-green: #5D8949;
 
 }
-
+/* .nodot { */
+/* 	list-style-type : none; */
+/* } */
+ul li{
+	list-style-type : none;
+	text-decoration: none;
+}
 body {
     background-color: var(--body-color);
     color:var(--font-color);
     width: 100vw;
 }
 
-
+.link_connection ul {
+	list-style-type : none;
+}
 .header{
     background: var(--nav-color);
     display: flex;
@@ -42,6 +50,7 @@ body {
     color: var(--font-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
+    list-style-type : none;
 }
 .link_connection a:visited{
     color: var(--font-color);

@@ -31,6 +31,9 @@
     display: flex;
     align-items: center;
 }
+.link_connection ul {
+	list-style-type : none;
+}
 .link_connection a{
     text-decoration: none;
     color: var(--font-color);
@@ -40,4 +43,7 @@
 .link_connection a:visited{
     color: var(--font-color);
 }
+/* .nodot { */
+/* 	list-style-type : none; */
+/* } */
 
