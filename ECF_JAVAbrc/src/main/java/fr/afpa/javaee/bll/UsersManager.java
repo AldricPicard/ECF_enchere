@@ -31,8 +31,15 @@ public class UsersManager {
     	}
 		
     }
-    
-    
+  //Modifier un utilisateur (Moi Rigord Jonathan certifie avoir ajouter cette modification)
+    public void modifier(Users user) throws BusinessException{
+    	try {
+            this.userDAO.modifier(user);
+        }catch (SQLException e) {
+            e.printStackTrace();
+            throw new BusinessException("erreur SQL lors de la modification en base de donnée");
+        }
+    }
     
 //-------------------------------------------------------------------
     

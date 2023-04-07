@@ -1,7 +1,7 @@
 package fr.afpa.javaee.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ public class UserDAOJdbcImpl implements UserDAO {
     //correctif de l'erreur sql
     private static final String INSERT_USER="INSERT INTO utilisateurs(pseudo,nom,prenom,email,telephone,rue,code_postal,ville,mot_de_passe,credit,administrateur) VALUES(?,?,?,?,?,?,?,?,?,?,?);";
     private static final String SELECT_PSEUDO_PASSWORD="SELECT * from utilisateurs where pseudo=? and mot_de_passe=?;";
-    
+    private static final String UPDATE_USER ="UPDATE encheres SET utilisateurs(pseudo,nom,prenom,email,telephone,rue,code_postal,ville,mot_de_passe) VALUES(?,?,?,?,?,?,?,?,?);";
     // ajouter un user dans la base de donner
     @Override
     public void ajouter(Users user) throws SQLException {
@@ -47,7 +47,6 @@ public class UserDAOJdbcImpl implements UserDAO {
         pstmt.setString(1, pseudo);
         pstmt.setString(2, password);
         ResultSet rs = pstmt.executeQuery();
-
         Users user = new Users();
         if (rs.next()) {
             user = new Users();
@@ -64,12 +63,36 @@ public class UserDAOJdbcImpl implements UserDAO {
             user.setCredit(rs.getInt("credit"));
             user.setAdmin(rs.getBoolean("administrateur"));
             return user;
-            
         }else {
-        	return null;
-        	
+        	return null;	
         }
-
+	}
+    
+    //methode pas fini
+	@Override
+	public void modifier(Users user) throws SQLException {
+		Connection cnx = ConnectionBDD.getConnection();
         
-    }   
+        try (PreparedStatement pstmt = cnx.prepareStatement(UPDATE_USER)){
+            pstmt.setString(1 , user.getPseudo());
+            pstmt.setString(2 , user.getNom());
+            pstmt.setString(3 , user.getPrenom());
+            pstmt.setString(4 , user.getEmail());
+            pstmt.setString(5 , user.getTelephone());
+            pstmt.setString(6 , user.getRue());
+            pstmt.setInt(7 , user.getCodePostal());
+            pstmt.setString(8 , user.getVille());
+            pstmt.setString(9 , user.getMotDePasse());
+            int rowsUpdate = pstmt.executeUpdate();
+            if (rowsUpdate == 0) {
+                throw new SQLException("La mise à jour de l'utilisateur a échoué.");
+            }
+        } catch (SQLException e) {
+            // Gérer l'exception ici
+            e.printStackTrace();
+        } finally {
+            cnx.close();
+        }
+		
+	}   
 }

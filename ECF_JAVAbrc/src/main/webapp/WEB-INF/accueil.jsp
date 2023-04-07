@@ -11,18 +11,6 @@
 
 <body>
 	<%@include file="header.jsp" %>
-<%-- 	<c:if test="${ !empty sessionScope.utilisateur.nom }"> --%>
-<%--     <p>Vous êtes ${ sessionScope.utilisateur.nom } !</p> --%>
-<%-- 	</c:if> --%>
-<%--     <c:choose> --%>
-<%-- 	<c:when test="${!empty sessionScope.utilisateur.nom }"> --%>
-<%-- 		<%@include file="headerDisconnectBTN.jsp" %> --%>
-<%-- 	</c:when> --%>
-<%-- 	<c:otherwise> --%>
-<%-- 		<%@include file="header.jsp" %> --%>
-<%-- 	</c:otherwise> --%>
-<%-- </c:choose> --%>
-
 
     <main>
         <div class="container_main">

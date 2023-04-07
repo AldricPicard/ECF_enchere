@@ -23,12 +23,21 @@
     max-height: 200px;
     width: 100%;
 }
+/* ul li { */
+/* 	list-style-type : none; */
+/* } */
+ul {
+	list-style-type : none;
+}
 .header img{
     max-height: 200px;
 }
 .link_connection{
     display: flex;
     align-items: center;
+}
+.link_connection ul {
+	list-style-type : none;
 }
 .link_connection a{
     text-decoration: none;

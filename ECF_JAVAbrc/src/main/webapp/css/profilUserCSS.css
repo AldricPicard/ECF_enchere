@@ -13,7 +13,9 @@
     --color-green: #5D8949;
 
 }
-
+/* .nodot { */
+/* 	list-style-type : none; */
+/* } */
 body {
     background-color: var(--body-color);
     color:var(--font-color);
@@ -42,6 +44,9 @@ body {
     color: var(--font-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
+}
+.link_connection ul {
+	list-style-type : none;
 }
 .link_connection a:visited{
     color: var(--font-color);
@@ -85,6 +90,7 @@ label {
     width: 100%;
 
 }
+
 
 input {
     display: block;
