@@ -9,13 +9,13 @@
 				<ul>
 					<li><a href="">Vendre un article</a></li>
 					<li><a href="./ServletProfil">Mon profil</a></li>
-					<li><a href="">Deconnection</a></li>
+					<li><a href="./Deconnexion">Deconnection</a></li>
 				</ul>
 			</c:when>
 			<c:when test="${empty sessionScope.utilisateur }" >
 				<ul>
-				<li><a href="">S'inscrire</a></li>
-				<li><a href="">Se connecter</a></li>
+				<li><a href="./ServletConnectionUsers">S'inscrire</a></li>
+				<li><a href="./ServletConnectionUsers">Se connecter</a></li>
 			</ul>
 			</c:when>		
 		</c:choose>	
