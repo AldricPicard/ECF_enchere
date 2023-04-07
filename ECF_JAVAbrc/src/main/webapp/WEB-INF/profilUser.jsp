@@ -13,7 +13,7 @@
 
 <body>
 <c:choose>
-	<c:when test="${utilisateurs.no_utilisateur != null }">
+	<c:when test="${sessionScope.utilisateur != null }">
 		<%@include file="headerDisconnectBTN.jsp" %>
 	</c:when>
 	<c:otherwise>
@@ -24,38 +24,38 @@
         <h3>Mon profil</h3>
         <div class="form-div">
             <label for="username">Pseudo</label>
-            <input type="text" value="${ pseudo }" id="username">
+            <input type="text" value="${ sessionScope.utilisateur.pseudo }" id="username">
         </div>
         <div class="form-div">
             <label for="lastname">nom</label>
-            <input type="text" value="${ nom }" id="lastname">
+            <input type="text" value="${ sessionScope.utilisateur.nom }" id="lastname">
         </div>
         <div class="form-div">
             <label for="firstname">Prénom</label>
-            <input type="text" value="${ prenom }" id="firstname">
+            <input type="text" value="${ sessionScope.utilisateur.prenom }" id="firstname">
         </div>
         <div class="form-div">
             <label for="email">Email</label>
-            <input type="email" value="${ email }" id="email">
+            <input type="email" value="${ sessionScope.utilisateur.email }" id="email">
         </div>
         <div class="form-div">
             <label for="phone">Téléphone</label>
-            <input type="tel" value="${ phone }" id="phone">
+            <input type="tel" value="${ sessionScope.utilisateur.telephone }" id="phone">
         </div>
         <div class="form-div">
             <label for="street">Rue</label>
-            <input type="text" value="${ street }" id="street">
+            <input type="text" value="${ sessionScope.utilisateur.rue }" id="street">
         </div>
         <div class="form-div">
             <label for="zip">Code postal</label>
-            <input type="number" value="${ number }" id="zip">
+            <input type="number" value="${ sessionScope.utilisateur.codePostal }" id="zip">
         </div>
         <div class="form-div">
             <label for="city">Ville</label>
-            <input type="text" value="${ city }" id="city">
+            <input type="text" value="${ sessionScope.utilisateur.ville }" id="city">
         </div>
         <div class="btn-grp">
-            <button>Modifier</button>
+            <button href="">Modifier</button>
             <button>Supprimer mon compte</button>
             <button>Retour</button>
         </div>
